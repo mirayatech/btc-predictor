@@ -1,3 +1,33 @@
+import { Route, Routes } from "react-router-dom";
+import { Suspense, lazy } from "react";
+import { AuthContextProvider } from "./library/firebase/firebaseAuth";
+import { Toaster } from "react-hot-toast";
+
+const SignIn = lazy(() => import("./components/Authentication/SingIn"));
+const SignUp = lazy(() => import("./components/Authentication/SignUp"));
+
 export default function App() {
-  return <div>BTC Predictor</div>;
+  return (
+    <AuthContextProvider>
+      <Toaster />
+      <Routes>
+        <Route
+          path="/sign-in"
+          element={
+            <Suspense fallback={"Loading..."}>
+              <SignIn />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/sign-up"
+          element={
+            <Suspense fallback={"Loading..."}>
+              <SignUp />
+            </Suspense>
+          }
+        />
+      </Routes>
+    </AuthContextProvider>
+  );
 }
