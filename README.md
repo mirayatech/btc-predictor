@@ -72,10 +72,11 @@ I could make the game more fun by adding sound effects for when you get points o
 
 ## 🎥 Demo/Preview
 
-<video src="./public/video.mp4" controls="controls" width='100%'>
-</video>
 
-<img src="./public/preview.png" />
+
+https://github.com/mirayatech/BTC-Predictor/assets/71933266/987b4872-1105-4b36-9123-5e4205aec0fb
+
+
 
 ## 🚦 Running the Project
 
