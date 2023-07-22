@@ -25,12 +25,12 @@ export default function Game() {
   }, []);
   //
   return (
-    <div>
-      <div>
+    <div className=" h-screen flex flex-col items-center justify-center  bg-[#e1e9f0]">
+      <div className="mx-auto bg-white w-[400px] h-[85px] rounded-xl p-4 shadow-md flex justify-between mb-5 border">
         <SignOutButton />
         <Instructions />
       </div>
-      <div>
+      <div className="mx-auto bg-white w-[400px] rounded-xl p-4 shadow-md flex justify-between mb-5 border">
         <Score id={id} /> <Timer id={id} />
       </div>
       <Price />
