@@ -1,4 +1,4 @@
-## BTC/USD Price Prediction Game
+## 💰 BTC Predictor
 
 A game where you can guess if the price of Bitcoin (BTC/USD) will be higher or lower after one minute. It uses real Bitcoin prices from trusted online sources and updates in real-time.
 
