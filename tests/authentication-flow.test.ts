@@ -26,9 +26,7 @@ test("Authentication Flow", async ({ page }) => {
   await page.getByRole("button", { name: "Sign Up" }).click();
 
   // Expect sign up success message
-  await page.waitForSelector(
-    'text="Sign Up Successful! Welcome to our platform."'
-  );
+  await page.waitForSelector('text="Sign Up Successful! Welcome."');
   await page.waitForTimeout(1500);
 
   // Sign out
