@@ -20,8 +20,9 @@ export function Timer({ id }: { id?: string }) {
   }, [timeRemaining, guess, btcPrice, newBtcPrice]);
 
   return (
-    <p aria-live="polite">
-      Timer: <span>{timeRemaining}</span>
+    <p aria-live="polite" className="text-lg">
+      Timer:{" "}
+      <span className="w-[25px] inline-block text-lg">{timeRemaining}</span>
     </p>
   );
 }
