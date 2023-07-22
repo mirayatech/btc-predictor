@@ -21,7 +21,7 @@ export default function LeaderBoard() {
   return (
     <div className="max-w-screen-md  mx-auto pb-20">
       <div className="my-4 border-b-2">
-        <h2 className="text-xl font-bold leading-10">LeaderBoard</h2>
+        <h2 className="text-xl font-bold leading-10">Leader Board</h2>
       </div>
       <div className="p-10 bg-[#e1e9f0] max-h-[500px] overflow-auto rounded-sm border shadow-lg">
         {users.map((player, index) => {
