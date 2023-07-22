@@ -8,7 +8,11 @@ export function Instructions() {
   const handleClose = () => setOpen(false);
   return (
     <>
-      <button onClick={handleOpen} aria-label="Open game instructions">
+      <button
+        onClick={handleOpen}
+        aria-label="Open game instructions"
+        className=" bg-[#3498DB] border-b-4 border-[#2170a5] text-white text-2xl transition-all ease-in duration-200 px-4 rounded-lg shadow-mdactive:translate-y-[2px] active:border-b-2"
+      >
         <QuestionIcon />
       </button>
       <Modal
@@ -16,13 +20,26 @@ export function Instructions() {
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
+        className="flex items-center justify-center"
       >
-        <div>
-          <button aria-label="Close game instructions" onClick={handleClose}>
+        <div className="relative max-w-full py-12 px-16 rounded-xl bg-white">
+          <button
+            aria-label="Close game instructions"
+            onClick={handleClose}
+            className="text-gray-500 absolute top-2 right-2 bg-transparent border-none text-2xl"
+          >
             <CloseIcon />
           </button>
-          <h1 id="modal-modal-title">How to Play BTC Predictor:</h1>
-          <ul id="modal-modal-description">
+          <h1
+            className="text-2xl font-semibold text-black py-2.5 border-b-2 border-gray-200"
+            id="modal-modal-title"
+          >
+            How to Play BTC Predictor:
+          </h1>
+          <ul
+            id="modal-modal-description"
+            className="flex flex-col pt-5 gap-2.5 list-disc"
+          >
             <li>
               Guess if Bitcoin's price will go "up" or "down" in one minute.
             </li>
