@@ -5,6 +5,7 @@ import { Toaster } from "react-hot-toast";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 
 const Game = lazy(() => import("./components/Game/Game"));
+const Home = lazy(() => import("./components/Home/Home"));
 const SignIn = lazy(() => import("./components/Authentication/SingIn"));
 const SignUp = lazy(() => import("./components/Authentication/SignUp"));
 
@@ -13,6 +14,14 @@ export default function App() {
     <AuthContextProvider>
       <Toaster />
       <Routes>
+        <Route
+          path="/"
+          element={
+            <Suspense fallback={"Loading..."}>
+              <Home />
+            </Suspense>
+          }
+        />
         <Route
           path="/user/:id"
           element={
