@@ -28,7 +28,7 @@ const useStore = create<Store>((set) => ({
   btcPrice: null,
   newBtcPrice: null,
   guess: "",
-  timeRemaining: 5,
+  timeRemaining: 60,
   isGuessing: false,
   setBtcPrice: (price) => set({ btcPrice: price }),
   setNewBtcPrice: (price) => set({ newBtcPrice: price }),
@@ -66,7 +66,7 @@ const useStore = create<Store>((set) => ({
         return {
           btcPrice: newPrice,
           guess: "",
-          timeRemaining: 5,
+          timeRemaining: 60,
           isGuessing: false,
         };
       });
