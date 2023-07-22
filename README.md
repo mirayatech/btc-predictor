@@ -4,7 +4,7 @@
 
 A game where you can guess if the price of Bitcoin (BTC/USD) will be higher or lower after one minute. It uses real Bitcoin prices from trusted online sources, and updates in real time.
 
-### 🎲 How to play it
+## 🎲 How to play it
 
 - You'll guess whether the price of Bitcoin will be higher or lower after one minute by clicking the buttons:
 
@@ -30,7 +30,7 @@ A game where you can guess if the price of Bitcoin (BTC/USD) will be higher or l
 
 - Your score is saved, so you can come back anytime to see your score and continue guessing.
 
-### ⚡ Technologies
+## ⚡ Technologies
 
 - `Vite`
 - `React.js`
@@ -39,7 +39,7 @@ A game where you can guess if the price of Bitcoin (BTC/USD) will be higher or l
 - `Tailwind CSS`
 - `Playwright`
 
-### 🚀 API
+## 🚀 API
 
 I got the real-time Bitcoin prices from a service called [Coinbase cloud](<(https://docs.cloud.coinbase.com/exchange/docs/websocket-overview)>).
 
@@ -47,7 +47,7 @@ To get the current Bitcoin price, I used the fetch method from a URL: "https://a
 
 I used WebSockets and a library called [ReconnectingWebSocket](https://github.com/joewalnes/reconnecting-websocket) to get real-time Bitcoin price updates. It connected to 'wss://ws-feed.pro.coinbase.com' and received live updates from Coinbase cloud whenever the Bitcoin price changed.
 
-### 💭 Process:
+## 💭 Process:
 
 I started by focusing on the game's features and testing. I didn't focus too much about how it looked in the beginning.
 
@@ -64,22 +64,22 @@ After that, I worked on the game part. At first, I used random numbers for the p
 
 One tricky part was finding a 3rd-party library to provide real Bitcoin prices because many of them charge money, but I finally found one that worked well and was for free. After setting up real-time Bitcoin prices, I moved to the backend to save the scores. Lastly, I added the sign-in/sign-up and home pages and styled the whole app.
 
-### 🌪️ Challenges
+## 🌪️ Challenges
 
 Combining all the parts of the game to work together was a bit tricky. I had to learn about Websockets, which I hadn't used before, and how to fetch real-time Bitcoin prices using the library [ReconnectingWebSocket](https://github.com/joewalnes/reconnecting-websocket).
 
-### 🤔 How can it be improved?
+## 🤔 How can it be improved?
 
 I could make the game more fun by adding sound effects for when you get points or lose them, or when you click on the buttons. Adding animations would make the game feel more lively too. Also, I might let you guess prices for other digital money like Ethereum, not just Bitcoin, so the players have more fun options to choose from when playing.
 
-### 🎥 Demo/Preview
+## 🎥 Demo/Preview
 
 <video src="./public/video.mp4" controls="controls" width='100%'>
 </video>
 
 <img src="./public/preview.png" />
 
-### 🚦 Running the Project
+## 🚦 Running the Project
 
 To run the project in your local environment, follow these steps:
 
