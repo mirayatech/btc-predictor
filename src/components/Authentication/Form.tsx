@@ -40,13 +40,22 @@ export function Form({
   };
 
   return (
-    <div>
-      <form onSubmit={handleOnSubmit}>
-        <h2>{title}</h2>
+    <div className="w-full max-w-sm">
+      <form
+        className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 border "
+        onSubmit={handleOnSubmit}
+      >
+        <h2 className="text-2xl font-bold mb-6">{title}</h2>
         {additionalInput && (
-          <div>
-            <label htmlFor="name">Name</label>
+          <div className="mb-4">
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="name"
+            >
+              Name
+            </label>
             <input
+              className="placeholder:text-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               type="text"
               name="name"
               id="name"
@@ -57,9 +66,15 @@ export function Form({
           </div>
         )}
 
-        <div>
-          <label htmlFor="email">Email</label>
+        <div className="mb-4">
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="email"
+          >
+            Email
+          </label>
           <input
+            className="placeholder:text-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="email"
             name="email"
             id="email"
@@ -69,9 +84,15 @@ export function Form({
           />
         </div>
 
-        <div>
-          <label htmlFor="password">Password</label>
+        <div className="mb-4">
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="password"
+          >
+            Password
+          </label>
           <input
+            className="placeholder:text-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="password"
             name="password"
             id="password"
@@ -81,11 +102,19 @@ export function Form({
           />
         </div>
 
-        <div>
-          <button type="submit">{buttonText}</button>
-          <div>
+        <div className="flex flex-col items-center justify-between">
+          <button
+            style={{ textShadow: "0px -2px #d7a83b" }}
+            className="bg-[#f3b42e] border-b-4 border-[#d79f25] w-full text-white text-md ease-in duration-200 p-2 mb-5 rounded  shadow-3xlactive:translate-y-[2px] active:border-b-2"
+            type="submit"
+          >
+            {buttonText}
+          </button>
+          <div className="text-sm">
             <span>{text}</span>
-            <Link to={linkUrl}>{linkText}</Link>
+            <Link to={linkUrl} className="ml-1 text-[#d79f25] hover:underline">
+              {linkText}
+            </Link>
           </div>
         </div>
       </form>
