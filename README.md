@@ -84,7 +84,7 @@ I could make the game more fun by adding sound effects for when you get points o
 To run the project in your local environment, follow these steps:
 
 1. Clone the repository to your local machine
-2. Run ` npm install` or `yarn` in the project directory to install the required dependencies
+2. Run `npm install` or `yarn` in the project directory to install the required dependencies
 3. Setup your Firebase account and replace the Firebase config values in the `.env` file with your own
 4. Run `npm start dev` or `yarn start dev` to get the project started.
 5. Open http://localhost:5173 (or the address shown in your console) in your web browser to see the app.
