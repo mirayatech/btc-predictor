@@ -7,8 +7,10 @@ export default function Home() {
   return (
     <div className="bg-white">
       <Banner />
-      <Demo />
-      <LeaderBoard />
+      <div className="px-5">
+        <Demo />
+        <LeaderBoard />
+      </div>
       <Footer />
     </div>
   );

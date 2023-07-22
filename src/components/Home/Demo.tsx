@@ -2,7 +2,7 @@ import Gif from "../../assets/demo.gif";
 
 export default function Demo() {
   return (
-    <div className="max-w-screen-md mt-20 mb-14 mx-auto ">
+    <div className="max-w-screen-md my-10 mx-auto">
       <img
         src={Gif}
         alt="Demo of how the game looks like"
