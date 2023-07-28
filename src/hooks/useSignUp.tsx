@@ -16,8 +16,7 @@ export default function useSignUp() {
     try {
       const user = await createUserWithEmailAndPassword(Auth, email, password);
       const userRef = doc(Database, `user/${user.user.uid}`);
-
-      setDoc(userRef, {
+      await setDoc(userRef, {
         score: 0,
         name: name,
         id: Auth.currentUser?.uid,
