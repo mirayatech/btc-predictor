@@ -14,7 +14,7 @@ export default function SignIn() {
   };
 
   return (
-    <div className="bg-[#e1e9f0] min-h-screen flex justify-center items-center bg-gradient-to-tr">
+    <div className="bg-slate-200  min-h-screen flex justify-center items-center">
       <BackButton />
 
       <Form

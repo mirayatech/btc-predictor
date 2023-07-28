@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export function BackButton() {
   return (
     <div className="absolute top-0 left-0 p-4">
-      <Link to="/" className="flex  hover:opacity-[.8]">
+      <Link to="/" className="flex  hover:opacity-[.7]">
         <svg
           className="w-6 h-6"
           fill="none"
@@ -18,7 +18,7 @@ export function BackButton() {
             d="M10 19l-7-7m0 0l7-7m-7 7h18"
           />
         </svg>
-        <span className="ml-2">Back</span>
+        <span className="ml-2 font-semibold text-zinc-800">Back</span>
       </Link>
     </div>
   );

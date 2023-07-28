@@ -15,7 +15,7 @@ export default function SignUp() {
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-[#e1e9f0]">
+    <div className="min-h-screen flex justify-center items-center bg-slate-200">
       <BackButton />
       <Form
         title="Sign Up"
