@@ -13,14 +13,14 @@ export default function Game() {
   useEffect(() => {
     getBitcoinPrice().then(setBtcPrice);
 
-    const rws = initWebSocket((data) => {
+    const coinbaseWebSocket = initWebSocket((data) => {
       if (data.type === "ticker") {
         setNewBtcPrice(parseFloat(data.price));
       }
     });
 
     return () => {
-      rws?.close();
+      coinbaseWebSocket?.close();
     };
   }, []);
 

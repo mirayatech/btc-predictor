@@ -13,10 +13,12 @@ export async function getBitcoinPrice() {
 }
 
 export function initWebSocket(onMessage: (data: any) => void) {
-  const rws = new ReconnectingWebSocket("wss://ws-feed.pro.coinbase.com");
+  const coinbaseWebSocket = new ReconnectingWebSocket(
+    "wss://ws-feed.pro.coinbase.com"
+  );
 
-  rws.onopen = () => {
-    rws.send(
+  coinbaseWebSocket.onopen = () => {
+    coinbaseWebSocket.send(
       JSON.stringify({
         type: "subscribe",
         channels: [{ name: "ticker", product_ids: ["BTC-USD"] }],
@@ -24,10 +26,10 @@ export function initWebSocket(onMessage: (data: any) => void) {
     );
   };
 
-  rws.onmessage = (msg) => {
+  coinbaseWebSocket.onmessage = (msg) => {
     const data = JSON.parse(msg.data);
     onMessage(data);
   };
 
-  return rws;
+  return coinbaseWebSocket;
 }
