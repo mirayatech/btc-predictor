@@ -20,7 +20,7 @@ export function Score({ id }: { id?: string }) {
         }
       }),
 
-    []
+    [Database]
   );
 
   return <p className="text-lg">Score: {user?.score}</p>;

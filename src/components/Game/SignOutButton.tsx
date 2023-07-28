@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function SignOutButton() {
   const navigate = useNavigate();
+
   function signOut() {
     Auth.signOut()
       .then(() => {

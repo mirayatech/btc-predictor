@@ -12,7 +12,7 @@ export function Price() {
         id="bitcoin-price"
         className="text-4xl text-center font-semibold my-auto pt-6"
       >
-        {btcPrice ? btcPrice + " USD" : "Loading..."}
+        {btcPrice ? btcPrice : "Loading..."}
       </span>
     </div>
   );

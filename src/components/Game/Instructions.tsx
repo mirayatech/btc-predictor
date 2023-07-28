@@ -4,12 +4,11 @@ import Modal from "@mui/material/Modal";
 
 export function Instructions() {
   const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+
   return (
     <>
       <button
-        onClick={handleOpen}
+        onClick={() => setOpen(true)}
         aria-label="Open game instructions"
         className=" bg-[#3498DB] border-b-4 border-[#2170a5] text-white text-2xl transition-all ease-in duration-200 px-4 rounded-lg shadow-mdactive:translate-y-[2px] active:border-b-2"
       >
@@ -17,7 +16,7 @@ export function Instructions() {
       </button>
       <Modal
         open={open}
-        onClose={handleClose}
+        onClose={() => setOpen(false)}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
         className="flex items-center justify-center"
@@ -25,7 +24,7 @@ export function Instructions() {
         <div className="relative max-w-full py-12 px-16 rounded-xl bg-white">
           <button
             aria-label="Close game instructions"
-            onClick={handleClose}
+            onClick={() => setOpen(false)}
             className="text-gray-500 absolute top-2 right-2 bg-transparent border-none text-2xl"
           >
             <CloseIcon />

@@ -9,8 +9,8 @@ export function GuessButtons() {
 
   const handleGuess = (guess: "up" | "down") => {
     if (!isGuessing) {
-      setSelectedButton(guess);
       setGuess(guess);
+      setSelectedButton(guess);
     }
   };
 
