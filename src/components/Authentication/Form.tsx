@@ -104,6 +104,7 @@ export function Form({
 
         <div className="flex flex-col items-center justify-between">
           <button
+            // Inline styling is used here because Tailwind CSS doesn't support text shadow.
             style={{ textShadow: "0px -2px #ce9e2e" }}
             className="bg-yellowPrimary border-b-4 border-yellowSecondary  w-full text-white text-md ease-in duration-200 p-2 mb-5 mt-2 rounded  shadow-3xlactive:translate-y-[2px] active:border-b-2"
             type="submit"

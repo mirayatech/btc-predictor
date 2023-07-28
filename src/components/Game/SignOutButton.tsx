@@ -21,8 +21,9 @@ export default function SignOutButton() {
     <button
       onClick={signOut}
       aria-label="sign out"
+      // Inline styling is used here because Tailwind CSS doesn't support text shadow.
       style={{ textShadow: "0px -2px #d7a83b" }}
-      className="bg-[#f0be26] border-b-4 border-[#d19e28] text-white text-md ease-in duration-200 p-3 rounded-lg shadow-3xlactive:translate-y-[2px] active:border-b-2"
+      className="bg-yellowPrimary border-b-4 border-yellowSecondary text-white text-md ease-in duration-200 p-3 rounded-lg shadow-3xlactive:translate-y-[2px] active:border-b-2"
     >
       Sign Out
     </button>

@@ -19,6 +19,7 @@ export function Banner() {
       </h2>
       <Link
         to={linkUrl}
+        // Inline styling is used here because Tailwind CSS doesn't support text shadow.
         style={{ textShadow: "0px -2px #d7a83b" }}
         className="bg-yellowPrimary border-b-4 border-yellowSecondary text-white text-md ease-in duration-200 p-2 px-20 mb-5 rounded  shadow-3xlactive:translate-y-[2px] active:border-b-2"
       >
