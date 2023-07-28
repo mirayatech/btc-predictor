@@ -23,12 +23,13 @@ type Store = {
     id?: string
   ) => void;
 };
+const userRef = doc(Database, `user/${Auth.currentUser?.uid}`);
 
 const useStore = create<Store>((set) => ({
   btcPrice: null,
   newBtcPrice: null,
   guess: "",
-  timeRemaining: 60,
+  timeRemaining: 10,
   isGuessing: false,
   setBtcPrice: (price) => set({ btcPrice: price }),
   setNewBtcPrice: (price) => set({ newBtcPrice: price }),
@@ -40,7 +41,6 @@ const useStore = create<Store>((set) => ({
       set(({ timeRemaining }) => ({ timeRemaining: timeRemaining - 1 }));
     } else if (state === "guess") {
       set(() => {
-        const userRef = doc(Database, `user/${Auth.currentUser?.uid}`);
         if (
           (guess === "up" && newPrice! > oldPrice!) ||
           (guess === "down" && newPrice! < oldPrice!)
@@ -66,7 +66,7 @@ const useStore = create<Store>((set) => ({
         return {
           btcPrice: newPrice,
           guess: "",
-          timeRemaining: 60,
+          timeRemaining: 10,
           isGuessing: false,
         };
       });
