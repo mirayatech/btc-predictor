@@ -1,10 +1,10 @@
 ## 💰 BTC Predictor
 
-A game where you can guess if the price of Bitcoin (BTC/USD) will be higher or lower after one minute. It uses real Bitcoin prices from trusted online sources and updates in real-time.
+A game where you can guess if the price of Bitcoin (BTC/USD) will be higher or lower after 10 seconds. It uses real Bitcoin prices from trusted online sources and updates in real-time.
 
 ## 🎲 How to play it
 
-- You'll guess whether the price of Bitcoin will be higher or lower after one minute by clicking the buttons:
+- You'll guess whether the price of Bitcoin will be higher or lower after 10 seconds by clicking the buttons:
 
   - "Up" button for price going up.
   - "Down" button for price going down.
@@ -13,7 +13,7 @@ A game where you can guess if the price of Bitcoin (BTC/USD) will be higher or l
 
 - Once you make a guess, you must wait until the guess is resolved before you can guess again.
 
-- The guess is checked after one minute, and you can only make one guess at a time.
+- The guess is checked after 10 seconds, and you can only make one guess at a time.
 
 - If you're right:
 
@@ -72,11 +72,7 @@ I could make the game more fun by adding sound effects for when you get points o
 
 ## 🎥 Demo/Preview
 
-
-
 https://github.com/mirayatech/BTC-Predictor/assets/71933266/987b4872-1105-4b36-9123-5e4205aec0fb
-
-
 
 ## 🚦 Running the Project
 

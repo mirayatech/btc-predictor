@@ -29,13 +29,13 @@ export function Demo() {
             <span className="font-semibold text-black">🤔 Guessing Game</span>
             <br />
             The game is super easy - you just need to guess whether the Bitcoin
-            price will be higher or lower after one minute.
+            price will be higher or lower after 10 seconds.
           </li>
 
           <li className="text-zinc-500">
-            <span className="font-semibold text-black">⏳ One Minute Wait</span>
+            <span className="font-semibold text-black">⏳ 10 seconds Wait</span>
             <br />
-            After you make a guess, you have to wait for 60 seconds to see if
+            After you make a guess, you have to wait for 10 seconds to see if
             you're right or not.
           </li>
 

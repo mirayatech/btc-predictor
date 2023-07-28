@@ -40,7 +40,7 @@ export function Instructions() {
             className="flex flex-col pt-5 gap-2.5 list-disc"
           >
             <li>
-              Guess if Bitcoin's price will go "up" or "down" in one minute.
+              Guess if Bitcoin's price will go "up" or "down" in 10 seconds.
             </li>
             <li>After guessing, wait for a minute to see if you're right.</li>
             <li>Correct guess adds 1 point, wrong guess removes 1.</li>
