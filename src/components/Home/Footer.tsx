@@ -1,6 +1,6 @@
 import { CodeIcon, GithubIcon } from "../../assets/icons";
 
-export default function Footer() {
+export function Footer() {
   return (
     <footer className="flex justify-center flex-col gap-3 p-5 items-center bg-[#252326]">
       <a

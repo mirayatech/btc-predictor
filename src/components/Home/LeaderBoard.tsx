@@ -3,7 +3,8 @@ import { UserType } from "../../library/types";
 import { Database } from "../../library/firebase/firebase";
 import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { useAuthContext } from "../../library/firebase/firebaseAuth";
-export default function LeaderBoard() {
+
+export function LeaderBoard() {
   const [users, setUsers] = useState<UserType[]>([]);
 
   const { user } = useAuthContext();
@@ -46,7 +47,7 @@ export default function LeaderBoard() {
                   </div>
                   <p className="block mt-1 text-lg leading-tight font-medium text-black">
                     {user?.uid
-                      ? user?.uid === player.id
+                      ? user.uid === player.id
                         ? "You"
                         : player.name
                       : player.name}

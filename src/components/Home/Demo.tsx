@@ -1,6 +1,6 @@
 import Gif from "../../assets/demo.gif";
 
-export default function Demo() {
+export function Demo() {
   return (
     <div className="max-w-screen-md my-10 mx-auto">
       <img

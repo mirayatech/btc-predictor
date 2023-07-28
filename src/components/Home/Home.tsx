@@ -1,7 +1,7 @@
 import { Banner } from "./Banner";
-import Demo from "./Demo";
-import Footer from "./Footer";
-import LeaderBoard from "./LeaderBoard";
+import { Demo } from "./Demo";
+import { Footer } from "./Footer";
+import { LeaderBoard } from "./LeaderBoard";
 
 export default function Home() {
   return (
