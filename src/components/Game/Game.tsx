@@ -25,7 +25,7 @@ export default function Game() {
   }, []);
 
   return (
-    <div className=" h-screen flex flex-col items-center justify-center  bg-[#e1e9f0]">
+    <div className="h-screen flex flex-col items-center justify-center  bg-slate-200">
       <div className="mx-auto bg-white w-[400px] h-[85px] rounded-xl p-4 shadow-md flex justify-between mb-5 border">
         <SignOutButton />
         <Instructions />

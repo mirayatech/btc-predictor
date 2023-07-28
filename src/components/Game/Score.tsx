@@ -23,5 +23,5 @@ export function Score({ id }: { id?: string }) {
     [Database]
   );
 
-  return <p className="text-lg">Score: {user?.score}</p>;
+  return <p className="font-semibold text-zinc-800">Score: {user?.score}</p>;
 }
