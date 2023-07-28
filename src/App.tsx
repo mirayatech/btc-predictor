@@ -3,6 +3,7 @@ import { Suspense, lazy } from "react";
 import { AuthContextProvider } from "./library/firebase/firebaseAuth";
 import { Toaster } from "react-hot-toast";
 import { ProtectedRoute } from "./components/ProtectedRoute";
+import { Spinner } from "./components/Spinner/Spinner";
 
 const Game = lazy(() => import("./components/Game/Game"));
 const Home = lazy(() => import("./components/Home/Home"));
@@ -17,7 +18,7 @@ export default function App() {
         <Route
           path="/"
           element={
-            <Suspense fallback={"Loading..."}>
+            <Suspense fallback={<Spinner />}>
               <Home />
             </Suspense>
           }
@@ -25,7 +26,7 @@ export default function App() {
         <Route
           path="/user/:id"
           element={
-            <Suspense fallback={"Loading..."}>
+            <Suspense fallback={<Spinner />}>
               <ProtectedRoute>
                 <Game />
               </ProtectedRoute>
@@ -35,7 +36,7 @@ export default function App() {
         <Route
           path="/sign-in"
           element={
-            <Suspense fallback={"Loading..."}>
+            <Suspense fallback={<Spinner />}>
               <SignIn />
             </Suspense>
           }
@@ -43,7 +44,7 @@ export default function App() {
         <Route
           path="/sign-up"
           element={
-            <Suspense fallback={"Loading..."}>
+            <Suspense fallback={<Spinner />}>
               <SignUp />
             </Suspense>
           }
