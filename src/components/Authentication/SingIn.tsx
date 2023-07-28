@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useSignIn } from "../../hooks/useSignIn";
 import { Form } from "./Form";
-import BackButton from "../Buttons/BackButton";
+import { BackButton } from "./BackButton";
 
 export default function SignIn() {
   const { signIn, error } = useSignIn();

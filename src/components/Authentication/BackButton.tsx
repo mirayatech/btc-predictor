@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function BackButton() {
+export function BackButton() {
   return (
     <div className="absolute top-0 left-0 p-4">
       <Link to="/" className="flex  hover:opacity-[.8]">
