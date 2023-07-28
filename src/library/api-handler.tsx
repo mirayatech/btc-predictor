@@ -26,8 +26,8 @@ export function initWebSocket(onMessage: (data: any) => void) {
     );
   };
 
-  coinbaseWebSocket.onmessage = (msg) => {
-    const data = JSON.parse(msg.data);
+  coinbaseWebSocket.onmessage = (message) => {
+    const data = JSON.parse(message.data);
     onMessage(data);
   };
 
