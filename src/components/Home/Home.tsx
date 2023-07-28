@@ -1,5 +1,5 @@
 import { Banner } from "./Banner";
-import { Demo } from "./Demo";
+import { Demo } from "./Demo/Demo";
 import { Footer } from "./Footer";
 import { LeaderBoard } from "./LeaderBoard/LeaderBoard";
 

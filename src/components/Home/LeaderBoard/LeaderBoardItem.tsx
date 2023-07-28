@@ -28,13 +28,13 @@ export function LeaderBoardItem({
   return (
     <div className="w-full bg-white rounded border my-3">
       <div className="p-3">
-        <div className="uppercase tracking-wide text-[#16a34a] font-semibold rounded-md">
+        <div className="text-green-600 font-semibold tracking-wider">
           <MedalEmoji index={index} />
         </div>
-        <p className="block mt-1 text-lg leading-tight font-medium text-black">
+        <p className="block mt-1 text-md leading-tight font-semibold text-zinc-800">
           {playerNameToShow}
         </p>
-        <p className="mt-2 text-gray-500">Score: {player.score}</p>
+        <p className="mt-1 text-gray-500">Score: {player.score}</p>
       </div>
     </div>
   );

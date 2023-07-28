@@ -2,11 +2,11 @@ import { CodeIcon, GithubIcon } from "../../assets/icons";
 
 export function Footer() {
   return (
-    <footer className="flex justify-center flex-col gap-3 p-5 items-center bg-[#252326]">
+    <footer className="flex justify-center flex-col gap-3 p-5 items-center bg-zinc-800">
       <a
         href="https://www.miraya.tech/"
         target="_blank"
-        className="flex items-center text-[#939ea7] duration-150 ease-linear hover:text-[#b6bdc4]"
+        className="flex items-center text-zinc-400 duration-150 ease-linear hover:text-zinc-300"
       >
         <span className="pr-1">
           <GithubIcon />
@@ -16,7 +16,7 @@ export function Footer() {
       <a
         href="https://github.com/mirayatech/BTC-Predictor"
         target="_blank"
-        className="flex items-center text-[#939ea7] duration-150 ease-linear hover:text-[#b6bdc4]"
+        className="flex items-center text-zinc-400 duration-150 ease-linear hover:text-zinc-300"
       >
         <span className="pr-1">
           <CodeIcon />
