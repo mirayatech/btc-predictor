@@ -5,7 +5,7 @@ import { useAuthContext } from "../../library/firebase/firebaseAuth";
 export function Banner() {
   const { user } = useAuthContext();
 
-  const linkUrl = user?.uid ? `/user/${user?.uid}` : `/sign-in`;
+  const linkUrl = user ? `/user/${user.uid}` : `/sign-in`;
 
   return (
     <div className=" h-400 flex flex-col justify-center items-center gap-5 bg-[#252326] shadow-xl py-10">

@@ -40,13 +40,13 @@ export function LeaderBoard() {
                 <div className="p-3">
                   <div className="uppercase tracking-wide text-sm text-[#16a34a] font-semibold rounded-md">
                     {medal ? (
-                      <span className="text-3xl"> {medal}</span>
+                      <span className="text-3xl">{medal}</span>
                     ) : (
                       `#${index + 1}`
                     )}
                   </div>
                   <p className="block mt-1 text-lg leading-tight font-medium text-black">
-                    {user?.uid
+                    {user
                       ? user.uid === player.id
                         ? "You"
                         : player.name
