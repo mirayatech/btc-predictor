@@ -19,9 +19,9 @@ export function Instructions() {
         onClose={() => setOpen(false)}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
-        className="flex items-center justify-center"
+        className="flex items-center justify-center m-5"
       >
-        <div className="relative max-w-full py-12 px-16 rounded-xl bg-white">
+        <div className="relative max-w-full p-6  rounded-xl bg-white">
           <button
             aria-label="Close game instructions"
             onClick={() => setOpen(false)}
@@ -30,24 +30,22 @@ export function Instructions() {
             <CloseIcon />
           </button>
           <h1
-            className="text-2xl font-semibold text-zinc-800 py-2.5 border-b-2 border-gray-200"
+            className="text-xl font-semibold text-zinc-800 py-2.5 border-b-2 border-gray-200"
             id="modal-modal-title"
           >
             How to Play BTC Predictor:
           </h1>
           <ul
             id="modal-modal-description"
-            className="flex flex-col pt-5 gap-2.5 "
+            className="flex flex-col pt-5 gap-2.5"
           >
             <li>
-              - Guess if Bitcoin's price will go "up" or "down" in 10 seconds.
+              Guess if Bitcoin's price will go "up" or "down" in 10 seconds.
             </li>
-            <li>
-              - After guessing, wait for 10 seconds to see if you're right.
-            </li>
-            <li>- Correct guess adds 1 point, wrong guess removes 1.</li>
-            <li>- Can't guess again until the last guess is done.</li>
-            <li>- Your score starts at 0 and is saved for next time.</li>
+            <li>After guessing, wait for 10 seconds to see if you're right.</li>
+            <li>Correct guess adds 1 point, wrong guess removes 1.</li>
+            <li>Can't guess again until the last guess is done.</li>
+            <li>Your score starts at 0 and is saved for next time.</li>
           </ul>
         </div>
       </Modal>
