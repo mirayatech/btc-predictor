@@ -25,7 +25,7 @@ export const gameFeatures = [
       "If your guess is right, you get 1 point. If it's wrong, you lose 1 point.",
   },
   {
-    title: "🧑‍🎓 Start Fresh",
+    title: "🎓 Start Fresh",
     description:
       "Everyone starts with a score of zero. It doesn't matter if you're new or experienced.",
   },
