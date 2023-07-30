@@ -32,6 +32,7 @@ A game where you can guess if the price of Bitcoin (BTC/USD) will be higher or l
 
 - `Vite`
 - `React.js`
+- `TypeScript`
 - `Firebase`
 - `Zustand`
 - `Tailwind CSS`
