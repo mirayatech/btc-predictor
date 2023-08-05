@@ -12,6 +12,11 @@ type Store = {
   guess: "up" | "down" | "";
   timeRemaining: number;
   isGuessing: boolean;
+  isFlashing: { active: boolean; color: "green" | "red" };
+  setIsFlashing: (flashing: {
+    active: boolean;
+    color: "green" | "red";
+  }) => void;
   setBtcPrice: (price: number | null) => void;
   setNewBtcPrice: (price: number | null) => void;
   setGuess: (guess: "up" | "down" | "") => void;
@@ -35,8 +40,10 @@ const useStore = create<Store>((set) => {
     btcPrice: null,
     newBtcPrice: null,
     guess: "",
-    timeRemaining: 10,
+    timeRemaining: 5,
     isGuessing: false,
+    isFlashing: { active: false, color: "green" },
+    setIsFlashing: (flashing) => set({ isFlashing: flashing }),
     setBtcPrice: (price) => set({ btcPrice: price }),
     setNewBtcPrice: (price) => set({ newBtcPrice: price }),
     setGuess: (guess) => set({ guess, isGuessing: true }),
@@ -46,7 +53,7 @@ const useStore = create<Store>((set) => {
       if (state === "countdown") {
         set(({ timeRemaining }) => ({ timeRemaining: timeRemaining - 1 }));
       } else if (state === "guess") {
-        set((state) => {
+        set((storeState) => {
           if (
             (guess === "up" && newPrice! > oldPrice!) ||
             (guess === "down" && newPrice! < oldPrice!)
@@ -56,6 +63,18 @@ const useStore = create<Store>((set) => {
             });
             displayToast("success", "Congratulations! You won a point.", "🎉");
             winSoundElement.play();
+            setTimeout(
+              () => set({ isFlashing: { active: false, color: "green" } }),
+              1000
+            );
+            return {
+              ...storeState,
+              isFlashing: { active: true, color: "green" },
+              btcPrice: newPrice,
+              guess: "",
+              timeRemaining: 5,
+              isGuessing: false,
+            };
           } else if (guess !== "") {
             getDoc(userRef).then((docSnap) => {
               if (docSnap.exists()) {
@@ -64,18 +83,30 @@ const useStore = create<Store>((set) => {
                   updateDoc(userRef, {
                     score: increment(-1),
                   });
-                  displayToast("error", "Oops! You lost a point.", "😞");
-                  loseSoundElement.play();
                 }
+                displayToast("error", "Oops! You lost a point.", "😞");
+                loseSoundElement.play();
+                setTimeout(
+                  () => set({ isFlashing: { active: false, color: "red" } }),
+                  1000
+                );
+                set({
+                  ...storeState,
+                  isFlashing: { active: true, color: "red" },
+                  btcPrice: newPrice,
+                  guess: "",
+                  timeRemaining: 5,
+                  isGuessing: false,
+                });
               }
             });
           }
 
           return {
-            ...state,
+            ...storeState,
             btcPrice: newPrice,
             guess: "",
-            timeRemaining: 10,
+            timeRemaining: 5,
             isGuessing: false,
           };
         });
