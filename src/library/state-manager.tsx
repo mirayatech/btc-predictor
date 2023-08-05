@@ -40,7 +40,7 @@ const useStore = create<Store>((set) => {
     btcPrice: null,
     newBtcPrice: null,
     guess: "",
-    timeRemaining: 5,
+    timeRemaining: 10,
     isGuessing: false,
     isFlashing: { active: false, color: "green" },
     setIsFlashing: (flashing) => set({ isFlashing: flashing }),
@@ -72,7 +72,7 @@ const useStore = create<Store>((set) => {
               isFlashing: { active: true, color: "green" },
               btcPrice: newPrice,
               guess: "",
-              timeRemaining: 5,
+              timeRemaining: 10,
               isGuessing: false,
             };
           } else if (guess !== "") {
@@ -95,7 +95,7 @@ const useStore = create<Store>((set) => {
                   isFlashing: { active: true, color: "red" },
                   btcPrice: newPrice,
                   guess: "",
-                  timeRemaining: 5,
+                  timeRemaining: 10,
                   isGuessing: false,
                 });
               }
@@ -106,7 +106,7 @@ const useStore = create<Store>((set) => {
             ...storeState,
             btcPrice: newPrice,
             guess: "",
-            timeRemaining: 5,
+            timeRemaining: 10,
             isGuessing: false,
           };
         });
