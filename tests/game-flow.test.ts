@@ -38,8 +38,8 @@ test("Game Flow", async ({ page }) => {
 
   // Make a guess (up)
   await page.getByRole("button", { name: "Guess Up" }).click();
-  // Wait for some time (assuming 27 seconds is the time for a guess to be validated)
-  await page.waitForTimeout(10);
+  // Wait for some time
+  await page.waitForTimeout(5);
 
   // Check Bitcoin price
   const btcPriceElement = await page.waitForSelector("#bitcoin-price");
@@ -47,8 +47,8 @@ test("Game Flow", async ({ page }) => {
 
   // Make another guess (down)
   await page.getByRole("button", { name: "Guess Down" }).click();
-  // Wait for some time (assuming 27 seconds is the time for a guess to be validated)
-  await page.waitForTimeout(10);
+  // Wait for some time
+  await page.waitForTimeout(5);
 
   // Check Bitcoin price again
   const newBtcPrice = await btcPriceElement.textContent();

@@ -7,12 +7,12 @@ export const gameFeatures = [
   {
     title: "🤔 Guessing Game",
     description:
-      "The game is super easy - you just need to guess whether the Bitcoin price will be higher or lower after 10 seconds.",
+      "The game is super easy - you just need to guess whether the Bitcoin price will be higher or lower after 5 seconds.",
   },
   {
-    title: "⏳ 10 seconds Wait",
+    title: "⏳ 5 seconds Wait",
     description:
-      "After you make a guess, you have to wait for 10 seconds to see if you're right or not.",
+      "After you make a guess, you have to wait for 5 seconds to see if you're right or not.",
   },
   {
     title: "🚫 One Guess Only",
