@@ -9,6 +9,7 @@ const Game = lazy(() => import("./components/Game/Game"));
 const Home = lazy(() => import("./components/Home/Home"));
 const SignIn = lazy(() => import("./components/Authentication/SingIn"));
 const SignUp = lazy(() => import("./components/Authentication/SignUp"));
+const NotFound = lazy(() => import("./components/NotFoud"));
 
 export default function App() {
   return (
@@ -46,6 +47,14 @@ export default function App() {
           element={
             <Suspense fallback={<Spinner />}>
               <SignUp />
+            </Suspense>
+          }
+        />
+        <Route
+          path="*"
+          element={
+            <Suspense fallback={<Spinner />}>
+              <NotFound />
             </Suspense>
           }
         />
