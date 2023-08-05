@@ -1,0 +1,50 @@
+:root {
+  --green: #5e8d3d;
+  --red: #e74c3c;
+}
+
+.flash-success {
+  animation: flashSuccessAnimation 1s;
+}
+
+.flash-error {
+  animation: flashErrorAnimation 1s;
+}
+
+@keyframes flashSuccessAnimation {
+  0% {
+    opacity: 1;
+
+    transform: scale(1);
+    color: var(--green);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+    color: var(--green);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    color: var(--green);
+  }
+}
+
+@keyframes flashErrorAnimation {
+  0% {
+    opacity: 1;
+
+    /* transform: scale(1); */
+    color: var(--red);
+  }
+  50% {
+    opacity: 0.8;
+    /* transform: scale(1.05); */
+    color: var(--red);
+  }
+  100% {
+    opacity: 1;
+    /* transform: scale(1); */
+    color: var(--red);
+  }
+}
